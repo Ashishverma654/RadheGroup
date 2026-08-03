@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from 'react';
 
 
-function AnimatedStat({ value, suffix = '', isFloat = false }) {
+function AnimatedStat({ value, suffix = '', isFloat = false }: { value: number; suffix?: string; isFloat?: boolean }) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const ref = React.useRef(null);
+  const ref = React.useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -22,8 +22,8 @@ function AnimatedStat({ value, suffix = '', isFloat = false }) {
   useEffect(() => {
     if (!isVisible) return;
     const duration = 2000;
-    let startTimestamp = null;
-    const step = (timestamp) => {
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
       
