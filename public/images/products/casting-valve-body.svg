@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+    <!-- Blueprint background -->
+    <rect width="800" height="600" fill="#0b2240" />
+    <defs>
+      <!-- Grid pattern -->
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#163a66" stroke-width="1" />
+        <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#22558f" stroke-width="1.5" />
+      </pattern>
+    </defs>
+    <rect width="800" height="600" fill="url(#grid)" />
+    
+    <!-- Outer technical frame -->
+    <rect x="20" y="20" width="760" height="560" fill="none" stroke="#3377cc" stroke-width="2" stroke-dasharray="8 4" opacity="0.8" />
+    <rect x="25" y="25" width="750" height="550" fill="none" stroke="#3377cc" stroke-width="1" opacity="0.5" />
+    
+    <!-- Title Block / Legend -->
+    <g transform="translate(40, 520)" opacity="0.9">
+      <rect width="720" height="45" fill="#0d2c54" stroke="#4488dd" stroke-width="1.5" />
+      <line x1="240" y1="0" x2="240" y2="45" stroke="#4488dd" stroke-width="1.5" />
+      <line x1="480" y1="0" x2="480" y2="45" stroke="#4488dd" stroke-width="1.5" />
+      
+      <text x="15" y="28" fill="#88ccff" font-family="monospace" font-size="14" font-weight="bold">RADHE GROUP TECHNICAL PLOT</text>
+      <text x="255" y="28" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold">RAW INVESTMENT CASTING PROFILE</text>
+      <text x="495" y="28" fill="#88ccff" font-family="monospace" font-size="12">SCALE: N.T.S. | DWG NO: RG-3690</text>
+    </g>
+    
+    <!-- Core CAD Drawing -->
+    <g stroke="#66aaff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      
+    <!-- Raw rough boundaries -->
+    <path d="M 200,240 Q 400,200 600,240 L 600,380 Q 400,420 200,380 Z" stroke-dasharray="3 3" />
+    
+    <!-- Finished profile inside -->
+    <path d="M 215,255 L 585,255 L 585,365 L 215,365 Z" stroke="#55ff55" stroke-width="2.5" />
+    
+    <!-- Machining allowance shaded zone -->
+    <path d="M 200,240 L 215,255 M 600,240 L 585,255 M 600,380 L 585,365 M 200,380 L 215,365" stroke-width="1" />
+  
+    </g>
+  </svg>
